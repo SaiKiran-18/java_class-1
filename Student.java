@@ -1,7 +1,7 @@
 import java.util.*;
 public class Student {
     int sno,m1,m2,m3,total;
-    String sname,result;
+    String sname,Result;
     void getdata(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter student name");
@@ -14,10 +14,14 @@ public class Student {
         m2=sc.nextInt();
         System.out.println("Enter student marks-3");
         m3=sc.nextInt();
+
         System.out.println("Total marks");
         total=m1+m2+m3;
-        total=sc.nextInt();
         sc.close();
+        if(m1>=35 && m2>=35 && m3>=35)
+        Result="pass";
+        else 
+        Result="fail";
     }
     void putdata(){
         System.out.println("Student details are");
@@ -27,7 +31,7 @@ public class Student {
         System.out.println("Student marks-2 "+m2);
         System.out.println("Student marks-3 "+m3);
         System.out.println("Total marks="+total);
-        System.out.println("Result="+result);
+        System.out.println("Result="+Result);
     }
 }
 class Test{
